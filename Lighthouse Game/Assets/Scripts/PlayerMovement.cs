@@ -12,10 +12,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 move;
 
+    private Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -33,5 +35,10 @@ public class PlayerMovement : MonoBehaviour
         move = transform.right * x + transform.forward * z;
 
         transform.position += move * speed * Time.deltaTime;
+    }
+
+    void Jump() 
+    {
+        
     }
 }
