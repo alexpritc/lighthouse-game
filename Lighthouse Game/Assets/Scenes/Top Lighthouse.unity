@@ -131,8 +131,9 @@ GameObject:
   - component: {fileID: 11338187}
   - component: {fileID: 11338189}
   - component: {fileID: 11338188}
+  - component: {fileID: 11338191}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: Door to Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,6 +199,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11338186}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!136 &11338191
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11338186}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.7849348
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: -2.830638}
 --- !u!1 &329513624
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,9 +222,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 329513625}
-  - component: {fileID: 329513627}
   - component: {fileID: 329513628}
   - component: {fileID: 329513626}
+  - component: {fileID: 329513627}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -225,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329513624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.391, z: 2.14}
+  m_LocalPosition: {x: 0, y: 10.005, z: 2.241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2081410222}
@@ -247,19 +262,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lighthouse: {fileID: 8296172668491843152}
   rot: {fileID: 1002641448}
---- !u!65 &329513627
-BoxCollider:
+--- !u!114 &329513627
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329513624}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.33, y: 0.66, z: 0.33}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58cda346277c057498a7d6880ddbd5ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!143 &329513628
 CharacterController:
   m_ObjectHideFlags: 0
@@ -351,7 +365,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7, y: -11, z: 7, w: 1.5e-44}
+  m_BoundingSphereOverride: {x: 1.8e-43, y: 0, z: 0, w: 3.0649e-41}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -722,7 +736,7 @@ GameObject:
   - component: {fileID: 1747458799}
   - component: {fileID: 1747458798}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: Door to Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
