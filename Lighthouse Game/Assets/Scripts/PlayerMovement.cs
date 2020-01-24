@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply gravity to velocity.
         velocity.y += gravity * Time.deltaTime;
+        //Debug.Log(move);
     }
 
     // Physics.
